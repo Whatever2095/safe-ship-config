@@ -1,8 +1,11 @@
 # kustomization.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-bases:
-  - ../../base
 namePrefix: dev-
 commonLabels:
   variant: development
+resources:
+- ../../base
+images:
+- name: europe-north2-docker.pkg.dev/massive-team-479322-a8/my-app-repo/my-custom-app
+  newTag: 49e0a0d474382a4c44252bba53db3ed8d18f3236
