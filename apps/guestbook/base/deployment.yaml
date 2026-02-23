@@ -14,7 +14,7 @@ spec:
         app: guestbook
     spec:
       containers:
-      - name: guestbook
-        image: nginx:latest
+      - name: my-custom-app
+        image: europe-north2-docker.pkg.dev/massive-team-479322-a8/my-app-repo/my-custom-app:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
